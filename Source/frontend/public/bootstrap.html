@@ -1,0 +1,12 @@
+<!doctype html>
+<html><body>
+<script>
+    const params = new URLSearchParams(location.search);
+    const token = params.get("t");
+    const target = params.get("to") || "/details";
+    if (token) {
+        localStorage.setItem("detal.token", token);
+    }
+    location.replace(target);
+</script>
+</body></html>
